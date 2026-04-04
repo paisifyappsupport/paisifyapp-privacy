@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paisify — India's Most Private Money App</title>
+<meta name="description" content="Import your bank PDF. Paisify reads 20+ Indian banks, auto-categorizes every rupee, gives you an AI coach powered by Gemini. No inbox access. No bank login. 100% private. ₹799/year.">
+<meta name="keywords" content="personal finance india, bank statement analyzer, money tracker india, UPI tracker, budget app india, HDFC ICICI SBI statement import">
+<meta property="og:title" content="Paisify — India's Most Private Money App">
+<meta property="og:description" content="Import your bank PDF. AI-powered insights. No inbox access. No bank login.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://paisifyapp.in">
+<meta name="theme-color" content="#FF6B00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- Clash Display via CDN -->
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<div id="noise"></div>
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<!-- ════════════════════════════════════════════════════════════════
+     NAV
+     ════════════════════════════════════════════════════════════════ -->
+<nav class="nav">
+  <a href="/" class="nav-logo" aria-label="Paisify Home">
+    <span class="nav-wordmark">PAISIFY</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#features">Features</a></li>
+    <li><a href="#showcase">Screenshots</a></li>
+    <li><a href="#compare">Why Paisify</a></li>
+    <li><a href="#banks">Banks</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="https://play.google.com/store/apps/details?id=com.paisify.app" class="nav-dl" rel="noopener">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.18 23.76c.3.17.64.24.99.2l13.23-11.46-2.83-2.83L3.18 23.76zm14.3-15.96L5.05.24C4.7.04 4.32 0 3.97.1l11.37 11.37 2.14-1.67zM22.13 10.03l-3.06-1.77-2.37 2.05 2.37 2.39 3.08-1.78c.87-.5.87-1.39-.02-1.89zM4.03.37L14.96 11.3 12.52 13.5.56 1.8C.24 2.18.05 2.7.05 3.35v17.3c0 .65.19 1.17.51 1.55L13.37 12 4.03.37z"/></svg>
+      Download Free
+    </a>
+  </div>
+</nav>
+
+<!-- ════════════════════════════════════════════════════════════════
+     HERO
+     ════════════════════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-mesh"></div>
+  <div class="hero-grid"></div>
+
+  <div class="hero-left">
+    <div class="hero-badge sr">
+      <span class="hero-badge-dot"></span>
+      India's Most Private Money App
+    </div>
+
+    <h1 class="hero-h1 sr sr-d1">
+      <span class="l1">Tera paisa.</span>
+      <span class="l2">Teri clarity.</span>
+      <span class="l3">Ab koi confusion nahi.</span>
+    </h1>
+
+    <p class="hero-desc sr sr-d2">
+      Import your bank PDF. Paisify reads <strong>20+ Indian banks</strong>, auto-categorizes every rupee, spots patterns you'd never notice — and gives you an AI coach powered by Gemini that talks like a friend, not a textbook.
+    </p>
+
+    <div class="hero-btns sr sr-d3">
+      <a href="https://play.google.com/store/apps/details?id=com.paisify.app" class="btn-primary" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.18 23.76c.3.17.64.24.99.2l13.23-11.46-2.83-2.83L3.18 23.76zm14.3-15.96L5.05.24C4.7.04 4.32 0 3.97.1l11.37 11.37 2.14-1.67zM22.13 10.03l-3.06-1.77-2.37 2.05 2.37 2.39 3.08-1.78c.87-.5.87-1.39-.02-1.89zM4.03.37L14.96 11.3 12.52 13.5.56 1.8C.24 2.18.05 2.7.05 3.35v17.3c0 .65.19 1.17.51 1.55L13.37 12 4.03.37z"/></svg>
+        <span>Get it on Play Store</span>
+      </a>
+      <a href="#features" class="btn-text">
+        See all features
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h10M8 3l5 5-5 5"/></svg>
+      </a>
+    </div>
+
+    <div class="hero-trust sr sr-d4">
+      <div class="ht-item">
+        <div class="ht-num"><em data-count="20" data-suffix="+">20+</em></div>
+        <div class="ht-label">Indian Banks</div>
+      </div>
+      <div class="ht-item">
+        <div class="ht-num" style="color:var(--green)"><em data-count="0" data-prefix="₹">₹0</em></div>
+        <div class="ht-label">Inbox access needed</div>
+      </div>
+      <div class="ht-item">
+        <div class="ht-num"><em data-count="100" data-suffix="%">100%</em></div>
+        <div class="ht-label">On-device private</div>
+      </div>
+      <div class="ht-item">
+        <div class="ht-num" style="color:var(--saffron)"><em data-count="799" data-prefix="₹">₹799</em></div>
+        <div class="ht-label">Full Pro / year</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Phone Stage -->
+  <div class="hero-right">
+    <div class="phone-stage">
+
+      <!-- Floating metric cards -->
+      <div class="float-card fc-1">
+        <div class="fc-label">Bachaya is mahine</div>
+        <div class="fc-value" style="color:var(--green)">₹97,167</div>
+        <div class="fc-sub">80% savings rate 🌟</div>
+      </div>
+      <div class="float-card fc-2">
+        <div class="fc-label">Paisify Score</div>
+        <div class="fc-value" style="color:var(--saffron)">73/100</div>
+        <div class="fc-sub">+12 from last month ↑</div>
+      </div>
+      <div class="float-card fc-3">
+        <div class="fc-label">EMI Burden</div>
+        <div class="fc-value" style="color:var(--teal)">21%</div>
+        <div class="fc-sub">✅ Healthy — RBI &lt;40%</div>
+      </div>
+
+      <!-- Main phone: Pulse screen -->
+      <div class="phone phone-main">
+        <div class="phone-frame">
+          <div class="phone-screen">
+            <div class="phone-island">
+              <div class="phone-island-cam"></div>
+              <div class="phone-island-sensor"></div>
+            </div>
+            <img src="assets/img/pulse.webp" alt="Paisify Pulse — Home Screen showing ₹22,833 spent, 80% savings rate" loading="eager" width="285">
+          </div>
+        </div>
+        <div class="phone-glow"></div>
+      </div>
+
+      <!-- Side phone: AI Coach -->
+      <div class="phone phone-side1">
+        <div class="phone-frame">
+          <div class="phone-screen">
+            <div class="phone-island">
+              <div class="phone-island-cam"></div>
+              <div class="phone-island-sensor"></div>
+            </div>
+            <img src="assets/img/coach.webp" alt="Paisify AI Money Coach conversation" loading="eager" width="248">
+          </div>
+        </div>
+      </div>
+
+      <!-- Second side: Financial Report -->
+      <div class="phone phone-side2">
+        <div class="phone-frame">
+          <div class="phone-screen">
+            <div class="phone-island">
+              <div class="phone-island-cam"></div>
+              <div class="phone-island-sensor"></div>
+            </div>
+            <img src="assets/img/report.webp" alt="Paisify Deep Financial Report" loading="lazy" width="230">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════════
+     MARQUEE
+     ════════════════════════════════════════════════════════════════ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <div class="marquee-item">PDF Bank Import<span class="marquee-sep"></span></div>
+    <div class="marquee-item">Live SMS Detection<span class="marquee-sep"></span></div>
+    <div class="marquee-item">Gemini AI Coach<span class="marquee-sep"></span></div>
+    <div class="marquee-item">Paisify Score<span class="marquee-sep"></span></div>
+    <div class="marquee-item">Month Trends<span class="marquee-sep"></span></div>
+    <div class="marquee-item">EMI Tracker<span class="marquee-sep"></span></div>
+    <div class="marquee-item">Tax 80C / 80D<span class="marquee-sep"></span></div>
+    <div class="marquee-item">Net Worth<span class="marquee-sep"></span></div>
+    <div class="marquee-item">Cloud Backup<span class="marquee-sep"></span></div>
+    <div class="marquee-item">Paisa Wrapped<span class="marquee-sep"></span></div>
+    <div class="marquee-item">Deep Financial Report<span class="marquee-sep"></span></div>
+    <div class="marquee-item">AES-256 Encrypted<span class="marquee-sep"></span></div>
+    <div class="marquee-item">DPDP Act 2023 Compliant<span class="marquee-sep"></span></div>
+    <div class="marquee-item">Zero Inbox Access<span class="marquee-sep"></span></div>
+    <!-- duplicate for seamless loop -->
+    <div class="marquee-item">PDF Bank Import<span class="marquee-sep"></span></div>
+    <div class="marquee-item">Live SMS Detection<span class="marquee-sep"></span></div>
+    <div class="marquee-item">Gemini AI Coach<span class="marquee-sep"></span></div>
+    <div class="marquee-item">Paisify Score<span class="marquee-sep"></span></div>
+    <div class="marquee-item">Month Trends<span class="marquee-sep"></span></div>
+    <div class="marquee-item">EMI Tracker<span class="marquee-sep"></span></div>
+    <div class="marquee-item">Tax 80C / 80D<span class="marquee-sep"></span></div>
+    <div class="marquee-item">Net Worth<span class="marquee-sep"></span></div>
+    <div class="marquee-item">Cloud Backup<span class="marquee-sep"></span></div>
+    <div class="marquee-item">Paisa Wrapped<span class="marquee-sep"></span></div>
+    <div class="marquee-item">Deep Financial Report<span class="marquee-sep"></span></div>
+    <div class="marquee-item">AES-256 Encrypted<span class="marquee-sep"></span></div>
+    <div class="marquee-item">DPDP Act 2023 Compliant<span class="marquee-sep"></span></div>
+    <div class="marquee-item">Zero Inbox Access<span class="marquee-sep"></span></div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════════
+     FEATURES — Each feature gets its own full section with screenshot
+     ════════════════════════════════════════════════════════════════ -->
+<section class="features" id="features">
+
+  <!-- 1. Pulse / Home -->
+  <div class="feature-section">
+    <div class="feature-copy sr">
+      <span class="feature-tag free">Free</span>
+      <h2 class="feature-h">Your financial<br><em>pulse</em>, every day.</h2>
+      <p class="feature-desc">
+        Open the app and instantly see what matters: how much you've spent, how much is left, and whether you're on track. The <strong>spend gauge</strong> shows your daily burn vs limit — green to red, no confusion.
+      </p>
+      <ul class="feature-bullets">
+        <li><span class="fb-dot g"></span>Real-time budget progress with mood-based message</li>
+        <li><span class="fb-dot g"></span>Cashflow chart — actual vs projected spend, day by day</li>
+        <li><span class="fb-dot g"></span>AI Monthly Digest generated automatically after import</li>
+        <li><span class="fb-dot g"></span>Quick insights: food delivery spend, EMI load, forecast</li>
+      </ul>
+      <div class="feature-stat-row">
+        <div class="fsr-item">
+          <div class="fsr-num t-green">₹97,167</div>
+          <div class="fsr-label">Saved this month</div>
+        </div>
+        <div class="fsr-item">
+          <div class="fsr-num t-saffron">80%</div>
+          <div class="fsr-label">Savings rate</div>
+        </div>
+        <div class="fsr-item">
+          <div class="fsr-num">73/100</div>
+          <div class="fsr-label">Paisify Score</div>
+        </div>
+      </div>
+    </div>
+    <div class="feature-phone sr sr-d2">
+      <div class="feature-phone-wrap">
+        <div class="phone-frame">
+          <div class="phone-screen">
+            <div class="phone-island"><div class="phone-island-cam"></div><div class="phone-island-sensor"></div></div>
+            <img src="assets/img/pulse.webp" alt="Paisify Pulse home screen" loading="lazy">
+          </div>
+        </div>
+        <div class="phone-glow"></div>
+        <!-- Callout: Spend amount -->
+        <div class="callout" style="top:22%;left:-130px">
+          <div class="callout-bubble">Spent this month</div>
+          <div class="callout-line" style="width:40px"></div>
+        </div>
+        <!-- Callout: Savings rate -->
+        <div class="callout" style="bottom:30%;right:-120px;flex-direction:row-reverse">
+          <div class="callout-bubble" style="border-color:rgba(0,217,126,.3)">80% saved 🌟</div>
+          <div class="callout-line" style="width:30px;background:rgba(0,217,126,.4)"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. AI Coach -->
+  <div class="feature-section reverse">
+    <div class="feature-copy sr">
+      <span class="feature-tag pro">Pro Feature</span>
+      <h2 class="feature-h">An AI coach that<br><em>actually knows you.</em></h2>
+      <p class="feature-desc">
+        <strong>Paise</strong> — powered by Gemini 2.5 Flash — has access to your real numbers. Ask anything in Hindi or English. Get brutally honest, personalized answers — not generic advice copy-pasted from the internet.
+      </p>
+      <ul class="feature-bullets">
+        <li><span class="fb-dot g"></span>"Mera loan load theek hai?" → sees your actual EMIs</li>
+        <li><span class="fb-dot g"></span>"Month end tak kitna bachega?" → your real cashflow</li>
+        <li><span class="fb-dot g"></span>Structured financial diagnosis before you even type anything</li>
+        <li><span class="fb-dot s"></span>Works offline via smart local fallback engine</li>
+      </ul>
+      <div class="feature-stat-row">
+        <div class="fsr-item">
+          <div class="fsr-num t-amber">Gemini</div>
+          <div class="fsr-label">2.5 Flash powered</div>
+        </div>
+        <div class="fsr-item">
+          <div class="fsr-num t-saffron">Hinglish</div>
+          <div class="fsr-label">Hindi + English both</div>
+        </div>
+      </div>
+    </div>
+    <div class="feature-phone sr sr-d2">
+      <div class="feature-phone-wrap">
+        <div class="phone-frame">
+          <div class="phone-screen">
+            <div class="phone-island"><div class="phone-island-cam"></div><div class="phone-island-sensor"></div></div>
+            <img src="assets/img/coach.webp" alt="Paisify AI Money Coach" loading="lazy">
+          </div>
+        </div>
+        <div class="phone-glow" style="background:rgba(255,179,0,.2)"></div>
+        <div class="callout" style="top:18%;right:-140px;flex-direction:row-reverse">
+          <div class="callout-bubble" style="border-color:rgba(255,179,0,.3)">✦ Gemini 2.5 Flash</div>
+          <div class="callout-line" style="width:35px;background:rgba(255,179,0,.4)"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Month Trends -->
+  <div class="feature-section">
+    <div class="feature-copy sr">
+      <span class="feature-tag pro">Pro Feature</span>
+      <h2 class="feature-h">7 months of data.<br><em>3 tabs of insight.</em></h2>
+      <p class="feature-desc">
+        Month Trends goes deeper than any other Indian finance app. Overview, Categories, Habits — each tab reveals a different dimension of how your money actually moves.
+      </p>
+      <ul class="feature-bullets">
+        <li><span class="fb-dot g"></span>Income vs spend bar chart across all months</li>
+        <li><span class="fb-dot g"></span>Savings rate trend with 20% target line</li>
+        <li><span class="fb-dot g"></span>Per-category mini bar charts with MoM delta</li>
+        <li><span class="fb-dot g"></span>Spend consistency score, surplus/deficit by month</li>
+        <li><span class="fb-dot g"></span>Best month 🏆 and Tough month ⚠️ identified automatically</li>
+      </ul>
+      <div class="feature-stat-row">
+        <div class="fsr-item">
+          <div class="fsr-num t-green">₹1.87L</div>
+          <div class="fsr-label">Avg monthly income</div>
+        </div>
+        <div class="fsr-item">
+          <div class="fsr-num t-saffron">23%</div>
+          <div class="fsr-label">Avg savings rate</div>
+        </div>
+        <div class="fsr-item">
+          <div class="fsr-num t-teal">₹3.35L</div>
+          <div class="fsr-label">Total saved (7mo)</div>
+        </div>
+      </div>
+    </div>
+    <div class="feature-phone sr sr-d2">
+      <div class="feature-phone-wrap">
+        <div class="phone-frame">
+          <div class="phone-screen">
+            <div class="phone-island"><div class="phone-island-cam"></div><div class="phone-island-sensor"></div></div>
+            <img src="assets/img/trends.webp" alt="Paisify Month Trends screen" loading="lazy">
+          </div>
+        </div>
+        <div class="phone-glow" style="background:rgba(0,201,167,.2)"></div>
+        <div class="callout" style="top:25%;left:-130px">
+          <div class="callout-bubble" style="border-color:rgba(0,217,126,.3)">Income vs Spend</div>
+          <div class="callout-line" style="width:40px;background:rgba(0,217,126,.4)"></div>
+        </div>
+        <div class="callout" style="bottom:25%;right:-145px;flex-direction:row-reverse">
+          <div class="callout-bubble">Savings rate trend</div>
+          <div class="callout-line" style="width:40px"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Deep Financial Report -->
+  <div class="feature-section reverse">
+    <div class="feature-copy sr">
+      <span class="feature-tag pro">Pro Feature</span>
+      <h2 class="feature-h">Your complete<br><em>financial health check.</em></h2>
+      <p class="feature-desc">
+        The Deep Financial Report is generated by AI from your actual transaction history. Not generic advice — a structured diagnosis with red flags, areas to watch, what's working, and numbered action steps with real rupee amounts.
+      </p>
+      <ul class="feature-bullets">
+        <li><span class="fb-dot g"></span>Health score 1–10 with ring visualization</li>
+        <li><span class="fb-dot g"></span>🔴 Serious concerns — critical financial risks</li>
+        <li><span class="fb-dot g"></span>🟡 Areas to watch — patterns to fix</li>
+        <li><span class="fb-dot g"></span>✅ What's working — genuine strengths</li>
+        <li><span class="fb-dot g"></span>💡 Numbered action plan with specific amounts</li>
+      </ul>
+    </div>
+    <div class="feature-phone sr sr-d2">
+      <div class="feature-phone-wrap">
+        <div class="phone-frame">
+          <div class="phone-screen">
+            <div class="phone-island"><div class="phone-island-cam"></div><div class="phone-island-sensor"></div></div>
+            <img src="assets/img/report.webp" alt="Paisify Deep Financial Report" loading="lazy">
+          </div>
+        </div>
+        <div class="phone-glow"></div>
+        <div class="callout" style="top:22%;right:-130px;flex-direction:row-reverse">
+          <div class="callout-bubble" style="border-color:rgba(0,217,126,.3)">AI-powered analysis</div>
+          <div class="callout-line" style="width:35px;background:rgba(0,217,126,.4)"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. EMI Tracker -->
+  <div class="feature-section">
+    <div class="feature-copy sr">
+      <span class="feature-tag free">Free</span>
+      <h2 class="feature-h">Every loan.<br><em>One view.</em></h2>
+      <p class="feature-desc">
+        Track all your EMIs in one place. Auto-detect from bank PDF. See your debt-to-income ratio vs the <strong>RBI's 40% guideline</strong>. Know which loan to pay off first — snowball strategy built in.
+      </p>
+      <ul class="feature-bullets">
+        <li><span class="fb-dot g"></span>Auto-detect EMIs from imported PDF statements</li>
+        <li><span class="fb-dot g"></span>Monthly due calendar — never miss a payment</li>
+        <li><span class="fb-dot g"></span>Debt snowball — pay smallest loan first for momentum</li>
+        <li><span class="fb-dot g"></span>Interest rate tracking, outstanding balance view</li>
+      </ul>
+      <div class="feature-stat-row">
+        <div class="fsr-item">
+          <div class="fsr-num t-rose">₹25,263</div>
+          <div class="fsr-label">Monthly EMI total</div>
+        </div>
+        <div class="fsr-item">
+          <div class="fsr-num t-green">21%</div>
+          <div class="fsr-label">of income ✅ healthy</div>
+        </div>
+      </div>
+    </div>
+    <div class="feature-phone sr sr-d2">
+      <div class="feature-phone-wrap">
+        <div class="phone-frame">
+          <div class="phone-screen">
+            <div class="phone-island"><div class="phone-island-cam"></div><div class="phone-island-sensor"></div></div>
+            <img src="assets/img/emi.webp" alt="Paisify EMI Tracker" loading="lazy">
+          </div>
+        </div>
+        <div class="phone-glow" style="background:rgba(0,217,126,.15)"></div>
+        <div class="callout" style="top:20%;left:-130px">
+          <div class="callout-bubble" style="border-color:rgba(0,217,126,.3)">21% — Healthy ✅</div>
+          <div class="callout-line" style="width:40px;background:rgba(0,217,126,.4)"></div>
+        </div>
+        <div class="callout" style="bottom:22%;right:-130px;flex-direction:row-reverse">
+          <div class="callout-bubble">Due this month</div>
+          <div class="callout-line" style="width:35px"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. Net Worth + Year in Review -->
+  <div class="feature-section reverse">
+    <div class="feature-copy sr">
+      <span class="feature-tag pro">Pro Feature</span>
+      <h2 class="feature-h">Net Worth &amp;<br><em>Paisa Wrapped.</em></h2>
+      <p class="feature-desc">
+        Track your complete financial picture — assets (EPF, PPF, Gold, Sukanya) minus liabilities (all loans) = your real net worth. And at year end, get <strong>Paisa Wrapped</strong>: your full financial year summarized beautifully.
+      </p>
+      <ul class="feature-bullets">
+        <li><span class="fb-dot g"></span>Net Worth: ₹81,96,844 — assets minus liabilities</li>
+        <li><span class="fb-dot g"></span>Add EPF, PPF, Gold, Sukanya, FDs, stocks</li>
+        <li><span class="fb-dot g"></span>Year in Review: total income, saved, transactions, score</li>
+        <li><span class="fb-dot g"></span>Shareable — WhatsApp pe flex karo 🎊</li>
+      </ul>
+    </div>
+    <div class="feature-phone sr sr-d2">
+      <div class="feature-phone-wrap" style="display:flex;gap:16px;align-items:flex-start">
+        <!-- Net Worth phone -->
+        <div style="position:relative">
+          <div class="phone-frame" style="width:200px">
+            <div class="phone-screen">
+              <div class="phone-island"><div class="phone-island-cam"></div><div class="phone-island-sensor"></div></div>
+              <img src="assets/img/networth.webp" alt="Paisify Net Worth tracker" loading="lazy">
+            </div>
+          </div>
+        </div>
+        <!-- Year Review phone -->
+        <div style="margin-top:50px;position:relative">
+          <div class="phone-frame" style="width:185px">
+            <div class="phone-screen">
+              <div class="phone-island"><div class="phone-island-cam"></div><div class="phone-island-sensor"></div></div>
+              <img src="assets/img/yearreview.webp" alt="Paisify Year in Review" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. Score -->
+  <div class="feature-section">
+    <div class="feature-copy sr">
+      <span class="feature-tag free">Free</span>
+      <h2 class="feature-h">Your money score.<br><em>0 to 100. Monthly.</em></h2>
+      <p class="feature-desc">
+        The Paisify Score is a single number that tells you exactly how your finances are doing. Updated every month. You can see exactly what moved it — and a precise plan to improve.
+      </p>
+      <ul class="feature-bullets">
+        <li><span class="fb-dot g"></span>Budget Control — 40 points</li>
+        <li><span class="fb-dot g"></span>Savings Rate — 25 points</li>
+        <li><span class="fb-dot g"></span>Daily Streak — 15 points</li>
+        <li><span class="fb-dot g"></span>Goals Progress — 20 points</li>
+        <li><span class="fb-dot s"></span>Month-over-month delta with reason explanation</li>
+      </ul>
+      <div class="feature-stat-row">
+        <div class="fsr-item">
+          <div class="fsr-num t-green">40/40</div>
+          <div class="fsr-label">Budget Control</div>
+        </div>
+        <div class="fsr-item">
+          <div class="fsr-num t-green">25/25</div>
+          <div class="fsr-label">Savings Rate</div>
+        </div>
+      </div>
+    </div>
+    <div class="feature-phone sr sr-d2">
+      <div class="feature-phone-wrap" style="display:flex;gap:16px;align-items:flex-start">
+        <div>
+          <div class="phone-frame" style="width:200px">
+            <div class="phone-screen">
+              <div class="phone-island"><div class="phone-island-cam"></div><div class="phone-island-sensor"></div></div>
+              <img src="assets/img/score.webp" alt="Paisify Score screen" loading="lazy">
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:40px">
+          <div class="phone-frame" style="width:185px">
+            <div class="phone-screen">
+              <div class="phone-island"><div class="phone-island-cam"></div><div class="phone-island-sensor"></div></div>
+              <img src="assets/img/score2.webp" alt="Paisify Score detail" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ════════════════════════════════════════════════════════════════
+     SCREENSHOT SHOWCASE
+     ════════════════════════════════════════════════════════════════ -->
+<section class="showcase" id="showcase">
+  <div class="showcase-header sr">
+    <div class="eyebrow"><span class="eyebrow-dot"></span>Every Screen</div>
+    <h2 class="section-h">Real screenshots.<br>No mockup magic.</h2>
+    <p class="section-sub" style="max-width:520px">What you see is exactly what you get. Drag to explore all screens.</p>
+  </div>
+
+  <div class="showcase-rail">
+    <div class="ss-item">
+      <div class="ss-frame"><div class="ss-screen"><img src="assets/img/pulse.webp" alt="Pulse Home" loading="lazy"></div></div>
+      <div class="ss-label">Pulse · Home</div>
+    </div>
+    <div class="ss-item">
+      <div class="ss-frame"><div class="ss-screen"><img src="assets/img/cashflow.webp" alt="Cashflow Chart" loading="lazy"></div></div>
+      <div class="ss-label">Cashflow Chart</div>
+    </div>
+    <div class="ss-item">
+      <div class="ss-frame"><div class="ss-screen"><img src="assets/img/gauge.webp" alt="Spend Gauge" loading="lazy"></div></div>
+      <div class="ss-label">Daily Spend Gauge</div>
+    </div>
+    <div class="ss-item">
+      <div class="ss-frame"><div class="ss-screen"><img src="assets/img/insights.webp" alt="AI Insights" loading="lazy"></div></div>
+      <div class="ss-label">AI Insights</div>
+    </div>
+    <div class="ss-item">
+      <div class="ss-frame"><div class="ss-screen"><img src="assets/img/kharche.webp" alt="Transactions" loading="lazy"></div></div>
+      <div class="ss-label">Kharche · Transactions</div>
+    </div>
+    <div class="ss-item">
+      <div class="ss-frame"><div class="ss-screen"><img src="assets/img/coach.webp" alt="AI Coach" loading="lazy"></div></div>
+      <div class="ss-label">AI Money Coach</div>
+    </div>
+    <div class="ss-item">
+      <div class="ss-frame"><div class="ss-screen"><img src="assets/img/score.webp" alt="Paisify Score" loading="lazy"></div></div>
+      <div class="ss-label">Paisify Score</div>
+    </div>
+    <div class="ss-item">
+      <div class="ss-frame"><div class="ss-screen"><img src="assets/img/report.webp" alt="Financial Report" loading="lazy"></div></div>
+      <div class="ss-label">Financial Report</div>
+    </div>
+    <div class="ss-item">
+      <div class="ss-frame"><div class="ss-screen"><img src="assets/img/trends.webp" alt="Month Trends" loading="lazy"></div></div>
+      <div class="ss-label">Month Trends</div>
+    </div>
+    <div class="ss-item">
+      <div class="ss-frame"><div class="ss-screen"><img src="assets/img/cats.webp" alt="Category Trends" loading="lazy"></div></div>
+      <div class="ss-label">Category Trends</div>
+    </div>
+    <div class="ss-item">
+      <div class="ss-frame"><div class="ss-screen"><img src="assets/img/emi.webp" alt="EMI Tracker" loading="lazy"></div></div>
+      <div class="ss-label">EMI Tracker</div>
+    </div>
+    <div class="ss-item">
+      <div class="ss-frame"><div class="ss-screen"><img src="assets/img/subs.webp" alt="Subscriptions" loading="lazy"></div></div>
+      <div class="ss-label">Subscriptions</div>
+    </div>
+    <div class="ss-item">
+      <div class="ss-frame"><div class="ss-screen"><img src="assets/img/networth.webp" alt="Net Worth" loading="lazy"></div></div>
+      <div class="ss-label">Net Worth</div>
+    </div>
+    <div class="ss-item">
+      <div class="ss-frame"><div class="ss-screen"><img src="assets/img/tax.webp" alt="Tax 80C" loading="lazy"></div></div>
+      <div class="ss-label">Tax 80C / 80D</div>
+    </div>
+    <div class="ss-item">
+      <div class="ss-frame"><div class="ss-screen"><img src="assets/img/yearreview.webp" alt="Year in Review" loading="lazy"></div></div>
+      <div class="ss-label">Paisa Wrapped</div>
+    </div>
+    <div class="ss-item">
+      <div class="ss-frame"><div class="ss-screen"><img src="assets/img/sapne.webp" alt="Savings Goals" loading="lazy"></div></div>
+      <div class="ss-label">Sapne · Goals</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════════
+     COMPARISON TABLE
+     ════════════════════════════════════════════════════════════════ -->
+<section class="comparison" id="compare">
+  <div class="wrap">
+    <div class="sr text-center">
+      <div class="eyebrow"><span class="eyebrow-dot"></span>Why Paisify</div>
+      <h2 class="section-h">We built what others won't.</h2>
+      <p class="section-sub" style="margin:0 auto">Other Indian finance apps trade your privacy for revenue. We don't.</p>
+    </div>
+
+    <div class="sr">
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th class="comp-th-paisify">PAISIFY</th>
+            <th>ET Money</th>
+            <th>Fi Money</th>
+            <th>Walnut</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>No SMS inbox access</td>
+            <td class="comp-paisify"><span class="check">✓</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+          </tr>
+          <tr>
+            <td>No bank account linking required</td>
+            <td class="comp-paisify"><span class="check">✓</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="partial">Optional</span></td>
+          </tr>
+          <tr>
+            <td>PDF bank statement import</td>
+            <td class="comp-paisify"><span class="check">✓ 20+ banks</span></td>
+            <td><span class="partial">Limited</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="partial">Limited</span></td>
+          </tr>
+          <tr>
+            <td>AI Money Coach (personalized)</td>
+            <td class="comp-paisify"><span class="check">✓ Gemini</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="partial">Basic</span></td>
+            <td><span class="cross">✗</span></td>
+          </tr>
+          <tr>
+            <td>On-device AES-256 encryption</td>
+            <td class="comp-paisify"><span class="check">✓</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+          </tr>
+          <tr>
+            <td>No ads</td>
+            <td class="comp-paisify"><span class="check">✓ Never</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="cross">✗</span></td>
+          </tr>
+          <tr>
+            <td>DPDP Act 2023 compliant</td>
+            <td class="comp-paisify"><span class="check">✓</span></td>
+            <td><span class="partial">Partial</span></td>
+            <td><span class="partial">Partial</span></td>
+            <td><span class="cross">✗</span></td>
+          </tr>
+          <tr>
+            <td>Hinglish UI &amp; AI responses</td>
+            <td class="comp-paisify"><span class="check">✓ Native</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+          </tr>
+          <tr>
+            <td>EMI + Loan tracker (free)</td>
+            <td class="comp-paisify"><span class="check">✓ Free</span></td>
+            <td><span class="partial">Paid</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="partial">Basic</span></td>
+          </tr>
+          <tr>
+            <td>Tax 80C/80D auto-detection</td>
+            <td class="comp-paisify"><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+          </tr>
+          <tr>
+            <td>Price (full features)</td>
+            <td class="comp-paisify" style="color:var(--saffron);font-weight:700">₹799/year</td>
+            <td style="color:var(--muted)">₹1,999/year</td>
+            <td style="color:var(--muted)">Free (ad-supported)</td>
+            <td style="color:var(--muted)">Free (data sold)</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="text-align:center;margin-top:16px;font-size:11px;color:var(--muted)">Comparison based on publicly available information. Features subject to change. We are not affiliated with or endorsed by any competitor.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════════
+     BANKS
+     ════════════════════════════════════════════════════════════════ -->
+<section class="banks" id="banks">
+  <div class="wrap">
+    <div class="sr text-center">
+      <div class="eyebrow"><span class="eyebrow-dot"></span>Bank Support</div>
+      <h2 class="section-h">Your bank.<br>Definitely supported.</h2>
+      <p class="section-sub" style="margin:0 auto">If your bank gives you a PDF statement, Paisify reads it — every date format, every layout variant, handled automatically.</p>
+    </div>
+    <div class="banks-pills">
+      <span class="bank-pill top">HDFC Bank</span>
+      <span class="bank-pill top">ICICI Bank</span>
+      <span class="bank-pill top">State Bank of India</span>
+      <span class="bank-pill top">Axis Bank</span>
+      <span class="bank-pill top">Kotak Mahindra</span>
+      <span class="bank-pill">Punjab National Bank</span>
+      <span class="bank-pill">Bank of Baroda</span>
+      <span class="bank-pill">IDFC First Bank</span>
+      <span class="bank-pill">Yes Bank</span>
+      <span class="bank-pill">IndusInd Bank</span>
+      <span class="bank-pill">Canara Bank</span>
+      <span class="bank-pill">Union Bank of India</span>
+      <span class="bank-pill">Indian Bank</span>
+      <span class="bank-pill">Bank of India</span>
+      <span class="bank-pill">Federal Bank</span>
+      <span class="bank-pill">RBL Bank</span>
+      <span class="bank-pill">AU Small Finance</span>
+      <span class="bank-pill">Utkarsh Small Finance</span>
+      <span class="bank-pill">IDBI Bank</span>
+      <span class="bank-pill">Central Bank of India</span>
+    </div>
+    <p class="bank-note sr">Missing your bank? <a href="mailto:paisifyapp.support@gmail.com">Let us know →</a> We add new formats regularly.</p>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════════
+     PRIVACY
+     ════════════════════════════════════════════════════════════════ -->
+<section class="privacy" id="privacy">
+  <div class="wrap">
+    <div class="privacy-inner">
+      <div class="sr">
+        <div class="eyebrow"><span class="eyebrow-dot"></span>Privacy First</div>
+        <h2 class="section-h">Tera data,<br>kabhi bhi<br><em>becha nahi jayega.</em></h2>
+        <p class="section-sub">
+          We are <strong>not a bank, NBFC, or financial advisor</strong>. We never connect to your account. We don't know what's in your inbox. Your financial life is not our product.
+        </p>
+        <div class="priv-badge">
+          <div class="priv-badge-icon">⚖️</div>
+          <div class="priv-badge-text">
+            Compliant with India's <strong>Digital Personal Data Protection Act 2023 (DPDP Act)</strong>. Shikayat Officer appointed as required. Data deletion on request within 72 hours.
+          </div>
+        </div>
+      </div>
+      <div class="priv-grid sr sr-d2">
+        <div class="priv-card">
+          <div class="priv-card-icon">🔒</div>
+          <div class="priv-card-title">AES-256-GCM Encrypted</div>
+          <div class="priv-card-desc">All data encrypted on-device using Android Keystore. The key never leaves your phone. Even we cannot read it.</div>
+        </div>
+        <div class="priv-card">
+          <div class="priv-card-icon">📵</div>
+          <div class="priv-card-title">Zero Inbox Access</div>
+          <div class="priv-card-desc">We never read your SMS inbox. Transaction detection is opt-in, processes patterns locally, never uploaded.</div>
+        </div>
+        <div class="priv-card">
+          <div class="priv-card-icon">🚫</div>
+          <div class="priv-card-title">No Ads. Ever.</div>
+          <div class="priv-card-desc">Revenue comes from Pro subscriptions only — not from selling your spending patterns to advertisers.</div>
+        </div>
+        <div class="priv-card">
+          <div class="priv-card-icon">🏦</div>
+          <div class="priv-card-title">No Bank Login</div>
+          <div class="priv-card-desc">No account linking, no credentials, no screen-scraping. Just a PDF you already have from your bank's own app.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════════
+     LEGAL STRIP
+     ════════════════════════════════════════════════════════════════ -->
+<div class="legal-strip">
+  <div class="legal-strip-inner">
+    <div class="legal-badge">⚖️ DPDP Act 2023</div>
+    <p class="legal-text">
+      Paisify is <strong>not a registered bank, NBFC, or SEBI-registered investment advisor</strong>. All financial insights are informational only and do not constitute financial advice. Subscription pricing via Google Play. Prices may vary.
+    </p>
+    <div class="legal-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="mailto:paisifyapp.support@gmail.com">Shikayat Officer</a>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════════
+     PRICING
+     ════════════════════════════════════════════════════════════════ -->
+<section class="pricing" id="pricing">
+  <div class="wrap">
+    <div class="sr text-center">
+      <div class="eyebrow"><span class="eyebrow-dot"></span>Pricing</div>
+      <h2 class="section-h">Less than one<br><em>Zomato order.</em></h2>
+      <p class="section-sub" style="margin:0 auto">₹799/year — less than ₹2.19/day — for complete financial clarity. And this actually saves you money.</p>
+    </div>
+
+    <div class="price-grid sr">
+      <div class="price-card">
+        <div class="price-plan">Free</div>
+        <div class="price-amount"><span class="sup">₹</span>0<span class="sub">/forever</span></div>
+        <div class="price-billing">No credit card. No signup friction.</div>
+        <ul class="price-list">
+          <li class="price-li"><span class="pl-check"></span>2 PDF imports per month</li>
+          <li class="price-li"><span class="pl-check"></span>Live SMS transaction detection</li>
+          <li class="price-li"><span class="pl-check"></span>Budget tracker &amp; cashflow chart</li>
+          <li class="price-li"><span class="pl-check"></span>EMI Tracker (free, unlimited)</li>
+          <li class="price-li"><span class="pl-check"></span>Subscription tracker</li>
+          <li class="price-li"><span class="pl-check"></span>Savings Goals (Sapne)</li>
+          <li class="price-li"><span class="pl-check"></span>Paisify Score</li>
+          <li class="price-li"><span class="pl-lock"></span>AI Money Coach</li>
+          <li class="price-li"><span class="pl-lock"></span>Deep Financial Report</li>
+          <li class="price-li"><span class="pl-lock"></span>Month Trends (3 tabs)</li>
+          <li class="price-li"><span class="pl-lock"></span>Cloud Backup</li>
+        </ul>
+        <a href="https://play.google.com/store/apps/details?id=com.paisify.app" class="price-btn ghost" rel="noopener">Download Free</a>
+      </div>
+
+      <div class="price-card pro">
+        <div class="price-hot">👑 Most Popular</div>
+        <div class="price-plan">Pro — Yearly</div>
+        <div class="price-amount"><span class="sup">₹</span>799<span class="sub">/year</span></div>
+        <div class="price-billing">₹66.58/month · Billed annually via Google Play</div>
+        <div class="price-save">Save 32% vs monthly · Less than ₹2.19/day</div>
+        <ul class="price-list">
+          <li class="price-li"><span class="pl-check"></span>Everything in Free</li>
+          <li class="price-li"><span class="pl-check"></span>Unlimited PDF imports</li>
+          <li class="price-li"><span class="pl-check"></span>AI Money Coach — Gemini 2.5 Flash</li>
+          <li class="price-li"><span class="pl-check"></span>Deep Financial Report (AI-powered)</li>
+          <li class="price-li"><span class="pl-check"></span>Month Trends — 3 comprehensive tabs</li>
+          <li class="price-li"><span class="pl-check"></span>Net Worth tracker</li>
+          <li class="price-li"><span class="pl-check"></span>Tax 80C/80D auto-detection report</li>
+          <li class="price-li"><span class="pl-check"></span>Paisa Wrapped (Year in Review)</li>
+          <li class="price-li"><span class="pl-check"></span>Cloud Backup &amp; cross-device restore</li>
+        </ul>
+        <a href="https://play.google.com/store/apps/details?id=com.paisify.app" class="price-btn primary" rel="noopener">Start Pro — ₹799/year</a>
+      </div>
+    </div>
+    <p class="price-note">Also available: Pro Monthly at ₹99/month. Subscriptions managed via Google Play. Cancel anytime. <a href="terms.html">Terms apply.</a></p>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════════
+     TESTIMONIALS
+     ════════════════════════════════════════════════════════════════ -->
+<section class="testimonials">
+  <div class="wrap">
+    <div class="sr text-center">
+      <div class="eyebrow"><span class="eyebrow-dot"></span>Reviews</div>
+      <h2 class="section-h">Logon ne kya kaha.</h2>
+    </div>
+    <div class="t-grid">
+      <div class="t-card sr sr-d1">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">"Finally ek app jo <strong>ICICI ka PDF ek click mein read karta hai</strong>. 7 mahine ka data, 865 transactions — sab auto-categorized. Koi aur Indian app itna nahi karta."</p>
+        <div class="t-author">
+          <div class="t-avatar" style="background:rgba(255,107,0,.15);color:var(--saffron)">A</div>
+          <div><div class="t-name">Amit V.</div><div class="t-role">Mumbai · Software Engineer</div></div>
+        </div>
+      </div>
+      <div class="t-card sr sr-d2">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">"AI Coach ne bataya ki mera EMI load <strong>21% of income</strong> hai — RBI limit ke andar. Pehle mujhe lagta tha main bahut zyada loan mein hoon. Now I sleep better."</p>
+        <div class="t-author">
+          <div class="t-avatar" style="background:rgba(0,217,126,.15);color:var(--green)">P</div>
+          <div><div class="t-name">Priya S.</div><div class="t-role">Bangalore · Product Manager</div></div>
+        </div>
+      </div>
+      <div class="t-card sr sr-d3">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">"No SMS access, no bank login — <strong>isi liye trust kiya</strong>. Month Trends ne dikha diya ki Feb mein ₹2.9L kharch ho gaya tha. Achhi aankhein khulin."</p>
+        <div class="t-author">
+          <div class="t-avatar" style="background:rgba(0,201,167,.15);color:var(--teal)">R</div>
+          <div><div class="t-name">Rahul G.</div><div class="t-role">Delhi · Chartered Accountant</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════════
+     FAQ
+     ════════════════════════════════════════════════════════════════ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="sr text-center">
+      <div class="eyebrow"><span class="eyebrow-dot"></span>FAQ</div>
+      <h2 class="section-h">Common sawaal.</h2>
+    </div>
+    <div class="faq-inner">
+      <div class="faq-item">
+        <div class="faq-question">Kya Paisify mera bank account access karta hai? <span class="faq-icon">+</span></div>
+        <div class="faq-answer">Bilkul nahi. Paisify kisi bhi bank account se directly connect nahi karta. Koi bank login, koi account linking, koi screen-scraping nahi. Aap apna bank statement PDF manually download karke import karte ho — wahi PDF jo aapka bank khud deta hai. Aapke banking credentials hamesha sirf aapke paas hi rehte hain.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Kaunse banks ka PDF import supported hai? <span class="faq-icon">+</span></div>
+        <div class="faq-answer">20+ Indian banks — HDFC, ICICI, SBI, Axis, Kotak, PNB, Bank of Baroda, IDFC First, Yes Bank, IndusInd, Canara, Union Bank, Indian Bank, Federal Bank, RBL, AU Small Finance, Utkarsh SFB, IDBI aur aur bhi. Naye banks regularly add hote hain. Agar aapka bank list mein nahi, email karein: <a href="mailto:paisifyapp.support@gmail.com">paisifyapp.support@gmail.com</a></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Mera financial data kahan store hota hai? <span class="faq-icon">+</span></div>
+        <div class="faq-answer">Aapka saara data aapke phone pe AES-256-GCM encryption ke saath store hota hai — Android Keystore use hota hai. Encryption key kabhi device se bahar nahi jaati. Cloud Backup enable karne pe data encrypted form mein store hota hai, lekin sirf aapka device decrypt kar sakta hai. Paisify ke paas aapke financial data ka access nahi hota kabhi bhi.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">SMS detection kaise kaam karta hai bina inbox padhhe? <span class="faq-icon">+</span></div>
+        <div class="faq-answer">Paisify ek Android SMS broadcast receiver use karta hai — yeh sirf incoming SMS sunata hai aur transaction-specific patterns match karta hai. Aapke personal messages, OTPs, aur koi bhi baaki SMS kabhi access nahi hote. Processing poori tarah se locally hoti hai — koi data upload nahi hota. Yeh feature opt-in hai aur aap kabhi bhi band kar sakte ho.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Free vs Pro — kya fark hai? <span class="faq-icon">+</span></div>
+        <div class="faq-answer">Free mein milta hai: 2 PDF imports/month, SMS detection, budget + cashflow, EMI tracker, subscription tracker, savings goals, aur Paisify Score. Pro (₹799/year) unlock karta hai: unlimited imports, AI Coach (Gemini), Deep Financial Report, Month Trends (3 tabs), Net Worth, Tax 80C/80D report, Paisa Wrapped, aur Cloud Backup.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Pro cancel karne ke baad kya hoga mere data ka? <span class="faq-icon">+</span></div>
+        <div class="faq-answer">Aapka saara imported data — transactions, goals, EMIs — aapke phone pe rehta hai. Cancel karne ke baad sirf Pro-exclusive features (AI Coach, Full Report, etc.) lock ho jaate hain. Aapka data kabhi delete nahi hota. Subscriptions Google Play ke through manage hote hain — cancel karna simple hai.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Kya Paisify ek registered financial advisor hai? <span class="faq-icon">+</span></div>
+        <div class="faq-answer">Nahi. Paisify ek personal finance tracking app hai — registered bank, NBFC, ya SEBI-registered investment advisor nahi hai. App ke andar ke saare financial insights informational purposes ke liye hain. Investment, loan, ya tax ke liye kisi qualified Chartered Accountant ya SEBI-registered advisor se milein.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">DPDP Act compliance kya hai? Data delete kaise karein? <span class="faq-icon">+</span></div>
+        <div class="faq-answer">Paisify India's Digital Personal Data Protection Act 2023 ke anusaar operate karta hai. Humne Shikayat Officer appoint kiya hai as required by law. Data deletion request ke liye email karein: <a href="mailto:paisifyapp.support@gmail.com">paisifyapp.support@gmail.com</a> — 72 ghante mein process hoga. Privacy policy: <a href="privacy.html">paisifyapp.in/privacy</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════════
+     CTA
+     ════════════════════════════════════════════════════════════════ -->
+<section class="cta">
+  <div class="cta-inner sr">
+    <div class="eyebrow" style="justify-content:center"><span class="eyebrow-dot"></span>Get Started</div>
+    <h2 class="cta-h">Paise samjhna<br>shuru karo aaj se.</h2>
+    <p class="cta-sub">Free. No signup. No bank login. No inbox access.<br>Import your first PDF and see where your money actually went.</p>
+    <div class="cta-btns">
+      <a href="https://play.google.com/store/apps/details?id=com.paisify.app" class="btn-primary" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.18 23.76c.3.17.64.24.99.2l13.23-11.46-2.83-2.83L3.18 23.76zm14.3-15.96L5.05.24C4.7.04 4.32 0 3.97.1l11.37 11.37 2.14-1.67zM22.13 10.03l-3.06-1.77-2.37 2.05 2.37 2.39 3.08-1.78c.87-.5.87-1.39-.02-1.89zM4.03.37L14.96 11.3 12.52 13.5.56 1.8C.24 2.18.05 2.7.05 3.35v17.3c0 .65.19 1.17.51 1.55L13.37 12 4.03.37z"/></svg>
+        <span>Download on Play Store</span>
+      </a>
+      <a href="mailto:paisifyapp.support@gmail.com" class="btn-text">
+        Contact Support
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M8 3l5 5-5 5"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════════
+     FOOTER
+     ════════════════════════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-wordmark">PAISIFY</div>
+        <p class="footer-tagline">India's most private money tracking app. No inbox access. No bank login. No ads. Just clarity about where your money goes.</p>
+        <div class="footer-email">
+          Support &amp; Shikayat Officer:<br>
+          <a href="mailto:paisifyapp.support@gmail.com">paisifyapp.support@gmail.com</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-h">Features</div>
+        <ul class="footer-ul">
+          <li><a href="#features">PDF Bank Import</a></li>
+          <li><a href="#features">AI Money Coach</a></li>
+          <li><a href="#features">Financial Report</a></li>
+          <li><a href="#features">Month Trends</a></li>
+          <li><a href="#features">EMI Tracker</a></li>
+          <li><a href="#features">Tax 80C/80D</a></li>
+          <li><a href="#features">Net Worth</a></li>
+          <li><a href="#features">Paisa Wrapped</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-h">Legal</div>
+        <ul class="footer-ul">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="privacy.html">Data Deletion Request</a></li>
+          <li><a href="mailto:paisifyapp.support@gmail.com">Shikayat Officer</a></li>
+          <li><a href="#faq">DPDP Act Compliance</a></li>
+          <li><a href="#privacy">Security</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-h">Download</div>
+        <ul class="footer-ul">
+          <li><a href="https://play.google.com/store/apps/details?id=com.paisify.app" rel="noopener">Google Play Store</a></li>
+          <li><a href="#pricing">Free Plan</a></li>
+          <li><a href="#pricing">Pro — ₹799/year</a></li>
+          <li><a href="#pricing">Pro — ₹99/month</a></li>
+        </ul>
+        <div style="margin-top:24px">
+          <a href="https://play.google.com/store/apps/details?id=com.paisify.app" rel="noopener"
+            style="display:inline-flex;align-items:center;gap:12px;background:var(--ink-3);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:14px 18px;text-decoration:none;color:var(--cream);transition:all .2s">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--saffron)" aria-hidden="true"><path d="M3.18 23.76c.3.17.64.24.99.2l13.23-11.46-2.83-2.83L3.18 23.76zm14.3-15.96L5.05.24C4.7.04 4.32 0 3.97.1l11.37 11.37 2.14-1.67zM22.13 10.03l-3.06-1.77-2.37 2.05 2.37 2.39 3.08-1.78c.87-.5.87-1.39-.02-1.89zM4.03.37L14.96 11.3 12.52 13.5.56 1.8C.24 2.18.05 2.7.05 3.35v17.3c0 .65.19 1.17.51 1.55L13.37 12 4.03.37z"/></svg>
+            <div>
+              <div style="font-size:9px;color:var(--muted);font-weight:600;letter-spacing:1px">GET IT ON</div>
+              <div style="font-family:var(--font-display);font-weight:700;font-size:15px;letter-spacing:-.3px">Google Play</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copy">
+        © 2026 Paisify. All rights reserved. Made in India 🇮🇳 &nbsp;·&nbsp;
+        <a href="mailto:paisifyapp.support@gmail.com">paisifyapp.support@gmail.com</a>
+      </div>
+      <div class="footer-legal">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="mailto:paisifyapp.support@gmail.com">Contact</a>
+      </div>
+    </div>
+
+    <div class="footer-disclaimer">
+      <strong>Disclaimer:</strong> Paisify is not a bank, Non-Banking Financial Company (NBFC), or SEBI-registered investment advisor. This app is a personal finance tracking and visualization tool. All financial insights, scores, and recommendations are for informational purposes only and do not constitute financial, investment, tax, or legal advice. Past savings trends do not guarantee future results. For financial decisions, consult a qualified Chartered Accountant or SEBI-registered financial advisor. Paisify does not access, store, or transmit your banking credentials or account numbers. &nbsp;·&nbsp; "HDFC Bank", "ICICI Bank", "State Bank of India", "Axis Bank", "Kotak Mahindra Bank" and all other bank names referenced herein are registered trademarks of their respective owners. Paisify is not affiliated with, endorsed by, sponsored by, or a product of any of these financial institutions. Bank names are referenced solely to indicate PDF statement format compatibility. &nbsp;·&nbsp; Google Play and the Google Play logo are trademarks of Google LLC. "Gemini" is a trademark of Google LLC. Paisify uses Google's Firebase AI Logic (Gemini API) under Firebase's terms of service.
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
