@@ -243,7 +243,7 @@ hr {
   </div>
 
   <div class="highlight-box hb-green">
-    <strong>The short version:</strong> Paisify reads your bank PDF on your device. Your financial data is encrypted and stays on your phone. We don't read your SMS inbox. We don't link to your bank account. We don't sell your data. We don't show you ads. Ever.
+    <strong>The short version:</strong> Paisify reads your bank PDF on your device. Local data is encrypted with the Android Keystore. Cloud backup (Pro, optional, off by default) is encrypted on your device with a PIN you choose — we cannot read it. SMS transaction detection uses only bank-alert SMS, with your explicit permission. AI Coach (optional) sends your financial summary to Google Gemini only when you opt in and tap a button. We don't link to your bank account. We don't sell your data. We don't show ads. Ever.
   </div>
 
   <!-- Table of Contents -->
@@ -298,8 +298,8 @@ hr {
       <div class="s-sub">Data collected automatically</div>
       <ul>
         <li><strong>Transaction SMS</strong> — only if you explicitly grant SMS permission. We receive individual SMS broadcasts matching known Indian bank transaction patterns. Your full SMS inbox is never read. See Section 9.</li>
-        <li><strong>Crash reports</strong> — anonymous crash logs via Firebase Crashlytics, containing device model, OS version, and stack trace. No financial data is included in crash reports.</li>
-        <li><strong>Anonymous analytics</strong> — basic event analytics via Firebase Analytics (e.g., which screens are visited, which features are used). These are aggregate, non-identifiable, and contain no financial data.</li>
+        <li><strong>Crash reports (opt-in only)</strong> — if you enable this in onboarding or Settings → Privacy, Firebase Crashlytics collects device model, OS version, and stack trace when the app crashes. No financial data is included in crash reports. Disabled by default.</li>
+        <li><strong>Usage analytics (opt-in only)</strong> — if you enable this in onboarding or Settings → Privacy, Firebase Analytics records which screens you visit and which features you use. We do not record ₹ amounts, merchant names, or any financial data. Disabled by default.</li>
       </ul>
 
       <div class="s-sub">Payment data</div>
@@ -361,10 +361,11 @@ hr {
 
       <div class="s-sub">How the encryption works</div>
       <ul>
-        <li>Encryption keys are generated using the <strong>Android Keystore system</strong> — a hardware-backed secure enclave on your device</li>
-        <li>The encryption key is tied to your specific device and never exported or transmitted</li>
-        <li>Even Paisify's developers cannot decrypt your data — we do not have access to your encryption key</li>
-        <li>If you factory reset your phone or uninstall the app, the encryption key is destroyed and the data cannot be recovered (unless you have Cloud Backup enabled)</li>
+        <li>Local storage encryption keys are generated using the <strong>Android Keystore system</strong> — a hardware-backed secure enclave on your device</li>
+        <li>The local encryption key is tied to your specific device and never exported or transmitted</li>
+        <li><strong>For locally stored data:</strong> Paisify developers cannot decrypt this data because the key never leaves your phone's Keystore.</li>
+        <li><strong>For cloud backup (Pro only, optional):</strong> backups are encrypted on your device with a PIN that you choose, <em>before</em> upload. See Section 6 for details. Forgetting the PIN means the backup is permanently unrecoverable — we cannot reset it.</li>
+        <li>If you factory reset your phone or uninstall the app, the local encryption key is destroyed and the data cannot be recovered (unless you have Cloud Backup enabled and remember your PIN)</li>
       </ul>
 
       <div class="highlight-box hb-teal">
@@ -384,8 +385,8 @@ hr {
       <ul>
         <li>Your transaction history, goals, EMIs, subscriptions, and profile settings</li>
         <li>Data is stored in <strong>Firebase Firestore</strong> (Google's cloud database infrastructure)</li>
-        <li>Data is stored as <strong>plaintext JSON in Firestore</strong>, but Firestore itself provides encryption at rest and TLS in transit per Google's infrastructure standards</li>
-        <li>Access is protected by Firebase Anonymous Authentication tied to your device</li>
+        <li><strong>Data is encrypted on your device with your PIN using PBKDF2-SHA256 (210,000 iterations) + AES-256-GCM <em>before</em> upload.</strong> Firestore sees only ciphertext — neither Paisify nor Google can read the contents without your PIN.</li>
+        <li>Access is scoped per-user by Firebase Anonymous Authentication + document-owner rules + Google Play Integrity attestation (App Check)</li>
       </ul>
 
       <div class="s-sub">What does NOT get backed up</div>
@@ -395,7 +396,7 @@ hr {
       </ul>
 
       <div class="s-sub">Cross-device restore</div>
-      <p>You can restore your backup to a new device using a 64-character restore key. This key is tied to your original device. Keep it safe — we cannot recover it for you.</p>
+      <p>You can restore your backup to a new device using two items: your 64-character device key <strong>and</strong> your backup PIN. Both are required — knowing the key alone is not enough to decrypt the data. Both the key and the PIN are shown in-app (Settings → Cloud Backup). <strong>We cannot recover your PIN.</strong> If you lose it, your backup is permanently unrecoverable.</p>
 
       <div class="s-sub">Deleting your backup</div>
       <p>You can delete your Cloud Backup at any time from within the app (Aur → Cloud Backup → Delete). You may also request deletion by emailing <a href="mailto:paisifyapp.support@gmail.com">paisifyapp.support@gmail.com</a>.</p>
@@ -410,18 +411,37 @@ hr {
       <p>Paisify Pro includes an AI Money Coach ("Paise") and a Deep Financial Report feature, both powered by <strong>Google's Gemini API</strong> via Firebase AI Logic.</p>
 
       <div class="s-sub">What data is sent to Gemini</div>
-      <p>When you use AI features, a summary of your financial data — including spending totals, income, EMI amounts, savings rate, and budget figures — is sent to Google's Gemini API to generate a response. <strong>Your bank account numbers, credentials, or full transaction list with merchant names are not sent verbatim.</strong> We construct a structured financial summary prompt.</p>
+      <p>When you use AI features, we send Google's Gemini API a <strong>financial summary of your data</strong>. This summary <em>does</em> include:</p>
+      <ul>
+        <li>Your top 8 merchants <strong>by name</strong> with their ₹ amounts</li>
+        <li>Spending totals per category (Food, Travel, Shopping, etc.) with ₹ amounts</li>
+        <li>Your monthly income, budget, savings rate, and EMI burden in ₹</li>
+        <li>Names and amounts of your EMIs (e.g., "Bajaj Finance — ₹12,000/month")</li>
+        <li>Names and amounts of your subscriptions (e.g., "Netflix — ₹649/month")</li>
+        <li>Names and ₹ progress of your savings goals</li>
+        <li>Up to 5 recent unusual transactions with merchant name and date</li>
+      </ul>
+      <p>Your data <em>does NOT</em> include bank account numbers, credentials, login details, or raw bank statements.</p>
+
+      <div class="s-sub">When data is sent</div>
+      <p>AI features are <strong>opt-in</strong>. They are disabled by default and only enabled if you tick the AI Coach box during onboarding or in Settings → Privacy. Even when opted in:</p>
+      <ul>
+        <li><strong>On-demand:</strong> Each time you tap "Ask AI" or "Generate Report", a financial summary is sent.</li>
+        <li><strong>Automatic (opt-in separately):</strong> If you also enable "Monthly Roast" and/or "Weekly Plan", Paisify will send a financial summary once per month or once per week automatically, on app open. Both toggles default off.</li>
+        <li>If you do not enable AI Coach, no data is ever sent to Gemini.</li>
+      </ul>
 
       <div class="s-sub">How Gemini handles your data</div>
       <ul>
         <li>Requests are made via Firebase AI Logic using <strong>Anonymous Firebase Authentication</strong> — no personal identifier is associated with the API call</li>
         <li>Google's Gemini API is subject to <strong>Google's Privacy Policy</strong> and <strong>Firebase Terms of Service</strong></li>
-        <li>By using AI features in Paisify, you agree that a financial summary may be sent to Google's Gemini API</li>
+        <li>Google may use prompt content for service operation. We do not train our own AI models on your data.</li>
         <li>You can use all other Paisify features without ever using AI features</li>
+        <li>You can revoke AI consent at any time in Settings → Privacy. Revocation is immediate.</li>
       </ul>
 
       <div class="highlight-box hb-orange">
-        <strong>You are in control:</strong> AI features are a separate, distinct action (tapping "Ask AI" or "Generate Report"). Your data is never sent to Gemini passively or in the background.
+        <strong>You are in control:</strong> AI features are fully opt-in. Without your consent, Paisify never sends any data to Gemini — not on-demand, not automatically, not in the background.
       </div>
     </div>
   </div>

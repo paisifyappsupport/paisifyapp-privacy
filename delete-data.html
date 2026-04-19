@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delete Paisify Account & Data</title>
+<meta name="description" content="Request deletion of your Paisify account and all associated financial data.">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #060504;
+    --card: #1A1510;
+    --ink: #0D0B09;
+    --cream: #F2EDE4;
+    --muted: #9A8D7F;
+    --saffron: #FF6B00;
+    --rose: #FF3B5C;
+    --green: #00D97E;
+    --dim: #2C2420;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--bg);
+    color: var(--cream);
+    font-family: 'Inter', system-ui, sans-serif;
+    min-height: 100vh;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+  header {
+    margin-bottom: 36px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--dim);
+  }
+  .brand {
+    color: var(--saffron);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 6px;
+  }
+  h1 {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+  }
+  .sub { color: var(--muted); font-size: 15px; margin-top: 8px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--dim);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--cream);
+  }
+  p { color: var(--cream); font-size: 14px; margin-bottom: 10px; }
+  ul { padding-left: 20px; margin: 10px 0; }
+  li { color: var(--cream); font-size: 14px; margin-bottom: 6px; }
+  .warn {
+    background: rgba(255, 59, 92, 0.08);
+    border: 1px solid rgba(255, 59, 92, 0.3);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin: 16px 0;
+  }
+  .warn strong { color: var(--rose); }
+  label {
+    display: block;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    margin-top: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  input[type=text], input[type=email], textarea {
+    width: 100%;
+    background: var(--ink);
+    border: 1px solid var(--dim);
+    border-radius: 10px;
+    color: var(--cream);
+    font-family: inherit;
+    font-size: 14px;
+    padding: 12px 14px;
+  }
+  input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--saffron);
+  }
+  textarea { min-height: 100px; resize: vertical; }
+  .mono {
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    letter-spacing: 0.5px;
+  }
+  button {
+    background: var(--rose);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 14px 24px;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+  }
+  button:hover { opacity: 0.92; }
+  button:disabled { background: var(--dim); color: var(--muted); cursor: not-allowed; }
+  footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--dim);
+    color: var(--muted);
+    font-size: 12px;
+    text-align: center;
+  }
+  footer a { color: var(--saffron); text-decoration: none; }
+  code {
+    background: var(--ink);
+    border: 1px solid var(--dim);
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-size: 13px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .success-box {
+    background: rgba(0, 217, 126, 0.08);
+    border: 1px solid rgba(0, 217, 126, 0.4);
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+    display: none;
+  }
+  .success-box.show { display: block; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">PAISIFY</div>
+    <h1>Delete Account &amp; Data</h1>
+    <div class="sub">Request permanent deletion of your Paisify account and all associated data — in-app or via this form.</div>
+  </header>
+
+  <div class="card">
+    <h2>Preferred method — in the app</h2>
+    <p>If you have Paisify installed, the fastest way to delete everything is from inside the app:</p>
+    <ul>
+      <li>Open Paisify</li>
+      <li>Go to <strong>Aur</strong> (Settings) → scroll to the bottom</li>
+      <li>Tap <strong>Delete Paisify Account</strong></li>
+      <li>Confirm by typing your name</li>
+    </ul>
+    <p>This deletes your local data, your encrypted cloud backup, and your anonymous Firebase identity — everything — in about 5 seconds.</p>
+  </div>
+
+  <div class="card">
+    <h2>Alternative — request via this form</h2>
+    <p>Use this form if you've uninstalled Paisify or can't access the app. Fill in the details below; we'll process your request within <strong>72 hours</strong> per our Privacy Policy and the DPDP Act 2023 §11 Right to Erasure.</p>
+
+    <div class="warn">
+      <strong>⚠️ This cannot be undone.</strong> Once deleted, your transaction history, goals, EMIs, subscriptions, and cloud backup are gone forever. We cannot recover any of it.
+    </div>
+
+    <form id="delForm" onsubmit="return submitForm(event)">
+      <label for="email">Email you used with Paisify</label>
+      <input type="email" id="email" name="email" required placeholder="you@example.com">
+
+      <label for="deviceKey">Backup device key (optional, 64 hex chars)</label>
+      <input type="text" id="deviceKey" name="deviceKey" class="mono" placeholder="abc123...def789 — find in Settings → Cloud Backup" pattern="[0-9a-fA-F]{64}" maxlength="64">
+
+      <label for="reason">Reason for deletion (optional)</label>
+      <textarea id="reason" name="reason" placeholder="Not required. Helps us improve."></textarea>
+
+      <label for="confirm">Type <code>DELETE MY PAISIFY ACCOUNT</code> to confirm</label>
+      <input type="text" id="confirm" name="confirm" required placeholder="Exact text required" oninput="onConfirmChange()">
+
+      <button type="submit" id="delBtn" disabled>Submit Deletion Request</button>
+    </form>
+
+    <div id="successBox" class="success-box">
+      <strong style="color: var(--green); font-size: 16px;">✅ Request received</strong>
+      <p style="margin-top: 8px;">We'll email you within 72 hours once your data is deleted. If you don't hear back, reach out to <a href="mailto:paisifyapp.support@gmail.com" style="color: var(--saffron);">paisifyapp.support@gmail.com</a>.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>What gets deleted?</h2>
+    <ul>
+      <li>All transactions, goals, EMIs, subscriptions, and profile data on your device</li>
+      <li>Your encrypted cloud backup (if any) in Firebase Firestore</li>
+      <li>Your anonymous Firebase Authentication identity</li>
+      <li>Any AI-generated content (monthly roast, weekly plan, financial report) cached on your device</li>
+    </ul>
+    <h2 style="margin-top: 20px;">What is NOT deleted?</h2>
+    <ul>
+      <li>Aggregate, anonymised analytics (if you had opted in) — these are irreversibly de-identified and cannot be tied back to you</li>
+      <li>Crash reports (if you had opted in) — stack traces only, no financial data, retained per Firebase policy for 90 days</li>
+      <li>Google Play purchase records — managed by Google, not us. Cancel your Pro subscription in Play Store.</li>
+    </ul>
+  </div>
+
+  <footer>
+    © 2026 Paisify · <a href="/">Home</a> · <a href="/privacy.html">Privacy Policy</a> · <a href="/terms.html">Terms</a> · <a href="mailto:paisifyapp.support@gmail.com">Contact</a>
+  </footer>
+</div>
+
+<script>
+  function onConfirmChange() {
+    const v = document.getElementById('confirm').value;
+    document.getElementById('delBtn').disabled = (v !== 'DELETE MY PAISIFY ACCOUNT');
+  }
+
+  function submitForm(ev) {
+    ev.preventDefault();
+    const email    = document.getElementById('email').value;
+    const devKey   = document.getElementById('deviceKey').value;
+    const reason   = document.getElementById('reason').value;
+    // Build mailto fallback — the form sends via email to the Grievance Officer.
+    // In production, this should POST to a cloud function that auto-deletes the
+    // Firestore doc matching the email and responds to the user. For now, email
+    // is the DPDP §11 compliant manual path.
+    const subject = encodeURIComponent('DPDP Data Deletion Request');
+    const body = encodeURIComponent(
+      'Email: ' + email + '\n' +
+      'Device key: ' + (devKey || '(not provided)') + '\n' +
+      'Reason: ' + (reason || '(none)') + '\n\n' +
+      'I request permanent deletion of my Paisify account and all associated data per DPDP Act 2023 §11.'
+    );
+    // Open user's mail client with pre-filled request.
+    window.location.href = 'mailto:paisifyapp.support@gmail.com?subject=' + subject + '&body=' + body;
+    document.getElementById('successBox').classList.add('show');
+    return false;
+  }
+</script>
+</body>
+</html>
